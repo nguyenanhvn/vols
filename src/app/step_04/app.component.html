@@ -1,0 +1,86 @@
+<div class="col-md-2 leftmenu">
+    <div class="col-md-12 leftmenu_inner">
+        <a href="./step03/01">
+            <img src="assets/img/lmenu01_off.png" class="img-responsive">
+        </a>
+    </div>
+    <div class="col-md-12 leftmenu_inner">
+        <a href="./step03/02">
+            <img src="assets/img/lmenu02_off.png" class="img-responsive">
+        </a>
+    </div>
+    <div class="col-md-12 leftmenu_inner">
+        <a href="./step03/03">
+            <img src="assets/img/lmenu03_off.png" class="img-responsive">
+        </a>
+    </div>
+    <div class="col-md-12 leftmenu_inner">
+        <a href="./step03/04">
+            <img src="assets/img/lmenu04_off.png" class="img-responsive">
+        </a>
+    </div>
+    <div class="col-md-12 leftmenu_inner">
+        <a href="./">
+            <img src="assets/img/totop.png" class="img-responsive">
+        </a>
+    </div>
+</div>
+<!--leftmenu-->
+
+<div class="col-md-10 maincontent " [@screenanimation]="screenState " style="opacity: 0; ">
+    <div class="row screen01 ">
+        <!--360°viewここから-->
+        <div id="screenidH">
+            <main>
+                <div class="view360">
+                    <div class="spritespin"></div>
+                </div>
+                <div class="menu360_180">
+                    <ul>
+                        <li class="current">
+                            <img src="assets/img/360viewicon.png " class="img-responsive " alt="360°view ">
+                        </li>
+                        <li>
+                            <img src="assets/img/180viewicon.png " class="img-responsive " alt="180°view " (click)="goScreenV()">
+                        </li>
+                        <li id="jszoom">標準
+                            <label class="switch">
+                                <input type="checkbox" name="jszoom" value="1">
+                                <span class="slider round"></span>
+                            </label>
+                            <span>拡大</span>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+        <div id="screenidV" style="display:none;">
+            <main>
+                <div class="view360">
+                    <div class="spritespinV"></div>
+                </div>
+                <div class="menu360_180">
+                    <ul>
+                        <li>
+                            <img src="assets/img/360viewicon.png " class="img-responsive " alt="360°view " (click)="goScreenH()">
+                        </li>
+                        <li class="current">
+                            <img src="assets/img/180viewicon.png " class="img-responsive " alt="180°view ">
+                        </li>
+                        <li id="jszoomV">標準
+                            <label class="switch">
+                                <input type="checkbox" name="jszoomV" value="1">
+                                <span class="slider round"></span>
+                            </label>
+                            <span>拡大</span>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!--360°viewここまで-->
+
+
+</div>
+<!--maincontent-->

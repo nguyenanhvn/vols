@@ -1,0 +1,164 @@
+<div id="layer2rd">
+
+    <div class="col-md-2 leftmenu">
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen01()">
+            <img src="{{side01image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen02()">
+            <img src="{{side02image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen03()">
+            <img src="{{side03image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen04()">
+            <img src="{{side04image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen05()">
+            <img src="{{side05image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner">
+            <a href="./">
+                <img src="assets/img/totop.png" class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <!--leftmenu-->
+
+    <div class="col-md-10 maincontent" [@screenanimation]="screenState" style="opacity: 0;">
+        <div class="row screen01">
+            <!--外廻り・足廻りここから-->
+            <div id="screenid01">
+                <main>
+                    <h2 class="{{nowcheckmarkclass}}">{{nowcheckmarkstring}}</h2>
+                    <div class="wrap">
+
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!--外廻り・足廻りここまで-->
+        <div class="row screen02">
+            <!--エンジンルームここから-->
+            <div id="screenid02" style="display:none;">
+                <main>
+                    <h2 class="{{nowcheckmarkclass}}">{{nowcheckmarkstring}}</h2>
+                    <div class="wrap">
+                        <img src="assets/img/EV-1-out-BE.png" class="img-responsive" alt="EV-1-out-BE.png">
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!--エンジンルームここまで-->
+        <div class="row screen03">
+            <!--下廻りここから-->
+            <div id="screenid03" style="display:none;">
+                <main>
+                    <h2 class="{{nowcheckmarkclass}}">{{nowcheckmarkstring}}</h2>
+                    <div class="wrap">
+                        <img src="assets/img/EV-1-out-BE.png" class="img-responsive" alt="EV-1-out-BE.png">
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!--下廻りここまで-->
+        <div class="row screen04">
+            <!--インテリアここから-->
+            <div id="screenid04" style="display:none;">
+                <main>
+                    <h2 class="{{nowcheckmarkclass}}">{{nowcheckmarkstring}}</h2>
+                    <div class="wrap">
+                        <img src="assets/img/EV-1-out-BE.png" class="img-responsive" alt="EV-1-out-BE.png">
+                    </div>
+                </main>
+            </div>
+        </div>
+        <!--インテリアここまで-->
+        <div class="row screen05">
+            <!--ロードテストここから-->
+            <div id="screenid05" style="display:none;">
+                <main>
+                    <h2>
+                        <img src="/assets/img/listvw.png" style="vertical-align: -8px;margin-right:5px;">ロードテスト</h2>
+                    <div class="wrap">
+                        <!--wrapここから-->
+                        <div class="wrap_inner">
+                            <!--<h3>ロードテスト</h3>-->
+                            <ul>
+                                <li>フットブレーキおよびパーキングブレーキの点検</li>
+                                <li>ハンドリングの点検</li>
+                                <li>エアコンディショナーの点検</li>
+                                <li>ギヤシフトおよびキックダウンの点検</li>
+                            </ul>
+                            <a href="javascript:void(0);" onclick="go3rdScreen();">
+                                <img src="assets/img/mainimg.png" class="img-responsive">
+                            </a>
+                        </div>
+                        <!---wrap_inner-->
+                        <!--<div class="next_link">
+                        <a href="#">VW指定点検（メンテナンステーブル）</a>
+                    </div>-->
+                    </div>
+                    <!--wrapここまで-->
+                </main>
+            </div>
+        </div>
+        <!--ロードテストここまで-->
+
+    </div>
+    <!--maincontent-->
+</div>
+<div id="layer3rd" style="display:none;">
+    <div class="col-md-2 leftmenu3rd">
+        <div class="col-md-12 leftmenu_inner" onclick="showFunction();">
+            <img src="assets/img/btn_function_off.png" class="img-responsive" id="btnfunction">
+        </div>
+        <div class="col-md-12 leftmenu_inner" onclick="showCheck();">
+            <img src="assets/img/btn_check_on.png" class="img-responsive" id="btncheck">
+        </div>
+        <div class="col-md-12 leftmenu_inner">
+            <a href="javascript:void(0);" onclick="go2ndScreen();">
+                <img src="assets/img/toback.png" class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontent3rd">
+        <div class="row screen3rd" id="screen3rdmain">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="layerwheel" style="display:none;">
+    <div class="col-md-2 leftmenuwheel">
+        <div class="col-md-12 leftmenu_inner" onclick="goWheelScreen01()">
+            <img src="assets/img/btn_alignment_off.png" class="img-responsive" id="btnwheelscreen01">
+        </div>
+        <div class="col-md-12 leftmenu_inner" onclick="goWheelScreen02()">
+            <img src="assets/img/btn_vw_tool_off.png" class="img-responsive" id="btnwheelscreen02">
+        </div>
+        <div class="col-md-12 leftmenu_inner" onclick="go2ndScreenFromeWheel()">
+            <img src="assets/img/toback.png" class="img-responsive">
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontentwheel">
+        <div class="row screenwheel" id="screenwheel">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</div>

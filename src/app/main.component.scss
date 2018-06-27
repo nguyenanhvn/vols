@@ -1,0 +1,130 @@
+@charset "UTF-8";
+@font-face{
+  font-family:"VWHeadWeb-Bold";
+  src:url("/assets/font/VW_Head/VWHeadWeb-Bold.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWHeadWeb-Bold.woff2")
+  format("woff2");
+  font-weight:"bold";
+  font-style:normal;
+}
+@font-face{
+  font-family:"VWHeadWeb-Regular";
+  src:url("/assets/font/VW_Head/VWHeadWeb-Regular.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWHeadWeb-Regular.woff2")
+  format("woff2");
+  font-weight:normal;
+  font-style:normal;
+}
+@font-face{
+  font-family:"VWTextWeb-Bold";
+  src:url("/assets/font/VW_Head/VWTextWeb-Bold.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWTextWeb-Bold.woff2")
+  format("woff2");
+  font-weight:"bold";
+  font-style:normal;
+}
+@font-face{
+  font-family:"VWTextWeb-Regular";
+  src:url("/assets/font/VW_Head/VWTextWeb-Regular.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWTextWeb-Regular.woff2")
+  format("woff2");
+  font-weight:normal;
+  font-style:normal;
+}
+*{
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  color:#333;
+  height: 100%;
+}
+body {
+  font-size: 10px;
+  font-size: 1.0rem;
+  font-family: "VWHeadWeb-Bold","Noto Sans Japanese",sans-serif;
+  height: 100%;
+  margin: 0;
+}
+.container-fluid{
+  //max-width: 1020px;
+  padding-right: 0;
+  padding-left: 0;
+  width: 100%;
+}
+.header{
+  position: fixed;
+  width: 100%;
+  height: 85px;
+  box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+  z-index: 99;
+  background: #fff;
+  &:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-top: solid 4px #0099da;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+  .logo{
+    position: absolute;
+    display: block;
+    width: 60px;
+    height: 60px;
+    top: 50%;
+    left: 41px;
+    margin-top: -30px;
+    z-index: 1;
+  }
+  h1{
+    width: 100%;
+    height: 85px;
+    padding-left: 96px;
+    font-family: 'VWHeadWeb-Bold';
+    font-size: 20px;
+    line-height: 85px;
+  }
+  img{
+    width: 70px;
+    height: auto;
+  }
+  .fr-icon{
+    display: block;
+    text-align: right;
+    text-align: -webkit-right;
+    color:#333;
+    display: flex;
+    align-items: center;
+    height: 85px;
+  }
+}
+
+
+.bg{
+  background: url("/assets/img/shadow.png")repeat-x;
+  background-position: top;
+  margin-top: 85px;
+}
+
+
+@media (max-width: 860px){
+  .header h1{
+      font-size: 2.5vw;
+  }
+  .header{
+    .logo{
+      left: 28px;
+    }
+    h1{
+      padding-left: 83px;
+    }
+  }
+}

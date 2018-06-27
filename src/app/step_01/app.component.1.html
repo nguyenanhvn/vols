@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="col-md-8 col-md-offset-2 bg-info" [@screenanimation]="screenState" style="opacity: 0;">
+        <p>親コンポーネント（1/2）</p>
+        <input (click)="hideseekState = 'show'" type="button" value="開く" />
+        <input (click)="hideseekState = 'hide'" type="button" value="閉じる" />
+        <p [@hideandseek]="hideseekState" style="opacity: 0;height : 0;">
+            <input type="text" [(ngModel)]="value01" />
+        </p>
+        <p>入力金額　{{value01}}</p>
+        <div class="ui card swipe-box" *ngFor="let avatar of avatars; let idx=index" (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)"
+            (swipeup)="swipe(idx, $event.type)" (swipedown)="swipe(idx, $event.type)" [class.visible]="avatar.visible" [class.hidden]="!avatar.visible">
+            <div class="image col-md-6 col-md-offset-4">
+                <img [src]="avatar.image" [alt]="avatar.name">
+            </div>
+            <div class="content col-md-8 col-md-offset-2" style="height:200px;">
+                <a class="header">{{avatar.name}}</a>
+            </div>
+        </div>
+        <p>
+            <a routerLink="/step02">2ページ目へ</a>
+        </p>
+    </div>
+</div>

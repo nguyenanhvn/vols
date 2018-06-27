@@ -1,0 +1,594 @@
+<div id="layer2rd">
+    <div class="col-md-2 leftmenu">
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen01()">
+            <img src="{{side01image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen02()">
+            <img src="{{side02image}}" class="img-responsive">
+        </div>
+    </div>
+    <div class="col-md-10 maincontent">
+        <div class="row screen01">
+            <!--点検カテゴリここから-->
+            <div class="col-md-12" [@screenanimation]="screenState" style="opacity: 0;">
+                <div id="screenid01" class="col-md-12">
+                    <main class="top">
+                        <div class="flow">
+                            <img src="assets/img/top/flow.png" class="img-responsive">
+                        </div>
+                        <!--flow-->
+                        <div class="container">
+                            <div class="box">
+                            </div>
+                            <div class="carlineup">
+                                <ul>
+                                    <li (click)="tapedCar('up!')" id="car-up" class="selectcar">
+                                        <img src="assets/img/top/up.png" alt="up!" class="img-responsive">
+                                        <p>up!</p>
+                                    </li>
+                                    <li (click)="tapedCar('Polo')" id="car-Polo" class="selectcar">
+                                        <img src="assets/img/top/polo.png" alt="Polo" class="img-responsive">
+                                        <p>Polo</p>
+                                    </li>
+                                    <li (click)="tapedCar('The Beetle')" id="car-TheBeetle" class="selectcar">
+                                        <img src="assets/img/top/Beetle.png" alt="The Beetle" class="img-responsive">
+                                        <p>The Beetle</p>
+                                    </li>
+                                    <li (click)="tapedCar('Golf')" id="car-Golf" class="selectcar">
+                                        <img src="assets/img/top/golf.png" alt="Golf" class="img-responsive">
+                                        <p>Golf</p>
+                                    </li>
+                                    <li (click)="tapedCar('Golf Variant')" id="car-GolfVariant" class="selectcar">
+                                        <img src="assets/img/top/GolfVariant.png" alt="Golf Variant" class="img-responsive">
+                                        <p>Golf Variant</p>
+                                    </li>
+                                    <li (click)="tapedCar('Scirocco')" id="car-Scirocco" class="selectcar">
+                                        <img src="assets/img/top/Scirocco.png" alt="Scirocco" class="img-responsive">
+                                        <p>Scirocco</p>
+                                    </li>
+                                    <li (click)="tapedCar('Golf Touran')" id="car-GolfTouran" class="selectcar">
+                                        <img src="assets/img/top/GolfTouran.png" alt="Golf Touran" class="img-responsive">
+                                        <p>Golf Touran</p>
+                                    </li>
+                                    <li (click)="tapedCar('Passat')" id="car-Passat" class="selectcar">
+                                        <img src="assets/img/top/Passat.png" alt="Passat" class="img-responsive">
+                                        <p>Passat</p>
+                                    </li>
+                                    <li (click)="tapedCar('Passat Variant')" id="car-PassatVariant" class="selectcar">
+                                        <img src="assets/img/top/PassatVariant.png" alt="Passat Variant" class="img-responsive">
+                                        <p>Passat Variant</p>
+                                    </li>
+                                    <li (click)="tapedCar('Volkswagen CC')" id="car-VolkswagenCC" class="selectcar">
+                                        <img src="assets/img/top/Volkswagencc.png" alt="Volkswagen CC" class="img-responsive">
+                                        <p>Volkswagen CC</p>
+                                    </li>
+                                    <li (click)="tapedCar('Arteon')" id="car-Arteon" class="selectcar">
+                                        <img src="assets/img/top/Arteon.png" alt="Arteon" class="img-responsive">
+                                        <p>Arteon</p>
+                                    </li>
+                                    <li (click)="tapedCar('Sharan')" id="car-Sharan" class="selectcar">
+                                        <img src="assets/img/top/Sharan.png" alt="Sharan" class="img-responsive">
+                                        <p>Sharan</p>
+                                    </li>
+                                    <li (click)="tapedCar('Tiguan')" id="car-Tiguan" class="selectcar">
+                                        <img src="assets/img/top/Tiguan.png" alt="Tiguan" class="img-responsive">
+                                        <p>Tiguan</p>
+                                    </li>
+                                    <li (click)="tapedCar('Touareg')" id="car-Touareg" class="selectcar">
+                                        <img src="assets/img/top/Touareg.png" alt="Touareg" class="img-responsive">
+                                        <p>Touareg</p>
+                                    </li>
+                                </ul>
+                                <h2>Hybrid Model</h2>
+                                <ul>
+                                    <li (click)="tapedCar('Golf GTE')" id="car-GolfGTE" class="selectcar">
+                                        <img src="assets/img/top/GolfGTE.png" alt="Golf GTE" class="img-responsive">
+                                        <p>Golf GTE</p>
+                                    </li>
+                                    <li (click)="tapedCar('Passat GTE')" id="car-PassatGTE" class="selectcar">
+                                        <img src="assets/img/top/PassatGTE.png" alt="Passat GTE" class="img-responsive">
+                                        <p>Passat GTE</p>
+                                    </li>
+                                    <li (click)="tapedCar('Passat GTE Variant')" id="car-PassatGTEVariant" class="selectcar">
+                                        <img src="assets/img/top/PassatGTEVariant.png" alt="Passat GTE Variant" class="img-responsive">
+                                        <p class="l2">Passat GTE
+                                            <br>Variant</p>
+                                    </li>
+                                    <li (click)="tapedCar('Touareg Hybrid')" id="car-TouaregHybrid" class="selectcar">
+                                        <img src="assets/img/top/TouaregHybrid.png" alt="Touareg Hybrid" class="img-responsive">
+                                        <p class="l2">Touareg
+                                            <br>Hybrid</p>
+                                    </li>
+                                </ul>
+                                <h2>EV Model</h2>
+                                <ul>
+                                    <li (click)="tapedCar('e-Golf')" id="car-e-Golf" class="selectcar">
+                                        <img src="assets/img/top/e-Golf.png" alt="e-Golf" class="img-responsive">
+                                        <p>e-Golf</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--carlineup-->
+                            <div class="modelcode">
+                                <ul>
+                                    <!--<ng-container *ngIf="results">-->
+                                    <li *ngFor="let data of results; let i = index" (click)="tapedmodel(data.c_model_code,data.c_vw_mainte)" id="model-{{data.c_model_code}}"
+                                        class="selectmodel">
+                                        {{data.c_model_code}}
+                                        <span>{{data.c_sale_term}}</span>
+                                    </li>
+                                    <!--</ng-container>-->
+                                </ul>
+                                <div class="banner">
+                                    <a href="step04">
+                                        <img src="assets/img/top/360_banner.png" alt="360°viewer" class="img-responsive">
+                                    </a>
+                                </div>
+                                <!--banner-->
+                            </div>
+                            <!--modelcode-->
+                            <div class="category">
+                                <ul class="category_01">
+                                    <li class="" *ngIf="selectedModel; else elseBlock01">
+                                        <a href="./step02/1year/{{selectedCar}}/{{selectedModel}}">１年点検</a>
+                                    </li>
+                                    <ng-template #elseBlock01>
+                                        <li class="category2l inactive">
+                                            １年点検
+                                            <br>
+                                            <span>（モデルを選択してください）</span>
+                                        </li>
+                                    </ng-template>
+                                    <li class="" *ngIf="selectedModel; else elseBlock02">
+                                        <a href="./step02/2year/{{selectedCar}}/{{selectedModel}}">２年点検</a>
+                                    </li>
+                                    <ng-template #elseBlock02>
+                                        <li class="category2l inactive">
+                                            ２年点検
+                                            <br>
+                                            <span>（モデルを選択してください）</span>
+                                        </li>
+                                    </ng-template>
+                                    <!--<li class="category2l" *ngIf="selectedVwMainte; else elseBlock03" (click)="goVwmaintenance('')">-->
+                                    <li class="category2l" (click)="goVwmaintenance('')">
+                                        <a>VW指定点検
+                                            <br>
+                                            <span>（メンテナンステーブル）</span>
+                                        </a>
+                                    </li>
+                                    <!--<ng-template #elseBlock03>
+                                        <li class="category2l inactive">
+                                            VW指定点検
+                                            <br>
+                                            <span>（メンテナンステーブル）</span>
+                                        </li>
+                                    </ng-template>-->
+                                    <li (click)="gomaintenacecreen()">
+                                        <a>日常点検</a>
+                                    </li>
+                                </ul>
+                                <ul class="category_02">
+                                    <li (click)="goWheel()">
+                                        <a>ホイールアライメント点検</a>
+                                    </li>
+                                    <li (click)="goOthers('01')">
+                                        <a>TSIエンジン外観図</a>
+                                    </li>
+                                    <li (click)="goOthers('02')">
+                                        <a>DSG透視図</a>
+                                    </li>
+                                    <li (click)="goOthers('03')">
+                                        <a>警告灯</a>
+                                    </li>
+                                    <li>
+                                        <a href="assets/img/Consumables_Parts.pdf" target="_blank">各種パーツ／消耗品について</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--category-->
+                        </div>
+                        <!--container-->
+                    </main>
+                </div>
+            </div>
+        </div>
+        <!--点検カテゴリここまで-->
+
+        <div class="row screen02">
+            <!--個別indexここから-->
+            <div id="screenid02" style="display:none;">
+                <main class="top_02">
+                    <div class="wrap col-md-12">
+                        <div class="wrap_inner">
+                            <img src="assets/img/individual.png" usemap="#ImageMap" alt="car" class="img-responsive">
+                            <map name="ImageMap">
+                                <area shape="circle" coords="192,443,101" href="./step03/02" alt="" />
+                                <area shape="circle" coords="515,138,100" href="./step03/04" alt="" />
+                                <area shape="circle" coords="1179,919,100" href="./step03/03" alt="" />
+                                <area shape="circle" coords="1470,829,99" href="./step03/01" alt="" />
+                                <area shape="rect" coords="81,1007,682,1148" href="step04" alt="" />
+                            </map>
+                        </div>
+                        <!--wrap_inner-->
+                        <!--
+                    <div class="banner">
+                        <a href="step04">
+                            <img src="assets/img/top/360_banner_02.png" width="300" height="70" alt="360°viewer" class="img-responsive">
+                        </a>
+                    </div>
+                    -->
+                        <!--banner-->
+                        <!-- 2018.04.03の指示によりコメントアウト ボタンがないためスライダでラインナップは出現しない
+                            <div class="lineupbtn slide_btn" style="float: right;" id="lineupbtn_base0" (click)="goLineup()">
+                            <img src="assets/img/top/right_button.png" alt="点検ラインナップ" width="60" height="240" class="img-responsive">
+                        </div>-->
+                        <div class="col-md-12 slide" id="slide_base" style="left:-10000px;">
+                            <!--slideここから-->
+                            <div class="lineup_hidden">
+                                <div class="lineupslide" id="checkinlineup" style="display:none;">
+                                    <!--非表示ここから-->
+                                    <div class="lineupbtn" style="float: left;" id="lineupbtn_base" (click)="hideLineup()">
+                                        <input type="checkbox" id="lineup" name="lineup">
+                                        <label for="lineup">
+                                            <img src="assets/img/top/right_button.png" alt="点検ラインナップ" width="60" height="240" class="img-responsive">
+                                        </label>
+                                    </div>
+                                    <h2 class="lineup_title">点検ラインアップ</h2>
+                                    <div class="scrl">
+                                        <div class="col">
+                                            <div class="col_inner">
+                                                <h3>エンジン</h3>
+                                                <ul>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/5-01.html')">
+                                                        <a>エンジンオイルおよびオイルエレメントの交換</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/2-01.html')">
+                                                        <a>スパークプラグの状態の点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/2-01.html')">
+                                                        <a>スパークプラグの交換</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/3-01.html')">
+                                                        <a>冷却水漏れの点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/5-01.html')">
+                                                        <a>排気ガスの状態の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/6-01.html')">
+                                                        <a>燃料漏れの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/28-01.html')">
+                                                        <a>エキゾーストシステムの損傷および取付け状態の点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/7-01.html')">
+                                                        <a>エアクリーナーエレメントの交換</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/3-01.html')">
+                                                        <a>ファンベルトの緩みおよび損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/8-01.html')">
+                                                        <a>タイミングベルトおよびテンショナーの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="goVwmaintenance('explaindata/modal/maintenance_table.html')">
+                                                        <a>クーラントポンプドライブ用ツースドベルトの点検</a>
+                                                    </li>
+                                                </ul>
+                                                <h3>動力伝達装置</h3>
+                                                <ul>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/25-01.html')">
+                                                        <a>DSGオイルおよびフィルターの交換</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/27-01.html')">
+                                                        <a>ドライブシャフトブーツの亀裂および損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/24-01.html')">
+                                                        <a>ボールジョイントおよびタイロッドエンドのブーツの亀裂および損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/21-01.html')">
+                                                        <a>ショックアブソーバーのオイル漏れおよび損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/23-01.html')">
+                                                        <a>ディファレンシャルオイルの漏れおよび量の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/35-01.html')">
+                                                        <a>クラッチペダルの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="goVwmaintenance('explaindata/modal/maintenance_table.html')">
+                                                        <a>Haldexカップリングのオイル交換</a>
+                                                    </li>
+                                                </ul>
+                                                <h3>ステアリング装置</h3>
+                                                <ul>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/1-01.html')">
+                                                        <a>リブドベルトの緩みおよび損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/22-01.html')">
+                                                        <a>ステアリングギアボックスの取付け部の緩みの点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/32-01.html')">
+                                                        <a>ステアリングの点検</a>
+                                                    </li>
+                                                </ul>
+                                                <h3>電気装置</h3>
+                                                <ul>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/4-01.html')">
+                                                        <a>バッテリーの点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/4-01.html')">
+                                                        <a>バッテリーターミナル部の接続状態の点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/17-01.html')">
+                                                        <a>灯火装置の点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/17-01.html')">
+                                                        <a>ヘッドライト/フォグランプの光軸点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/17-01.html')">
+                                                        <a>ヘッドライトウォッシャーの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/18-01.html')">
+                                                        <a>ホーンの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/37-01.html')">
+                                                        <a>インテリアライトの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/9-01.html')">
+                                                        <a>高電圧システム用冷却水量の点検（ハイブリッド車）</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/10-01.html')">
+                                                        <a>高電圧構成部品および高電圧ケーブルの点検（ハイブリッド車）</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/30-01.html')">
+                                                        <a>高電圧充電ソケットの汚れおよび損傷の点検（ハイブリッド車／電気自動車）</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/11-01.html')">
+                                                        <a>高電圧構成部品および高電圧ケーブルの点検（電気自動車）</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/31-01.html')">
+                                                        <a>高電圧バッテリーの充電状態の点検（電気自動車）</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/40-01.html')">
+                                                        <a>高電圧充電ケーブルの有無および状態の点検（電気自動車）</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!---col_inner-->
+                                            <div class="col_inner">
+                                                <h3>ブレーキ装置</h3>
+                                                <ul>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/12-01.html')">
+                                                        <a>ブレーキパッドの摩耗および損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/13-01.html')">
+                                                        <a>ブレーキ液の漏れの点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/14-01.html')">
+                                                        <a>ブレーキホースの損傷および取付け状態の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/33-01.html')">
+                                                        <a>パーキングブレーキの点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/34-01.html')">
+                                                        <a>ブレーキペダルの点検</a>
+                                                    </li>
+                                                </ul>
+                                                <h3>ホイール／タイヤ</h3>
+                                                <ul>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/15-01.html')">
+                                                        <a>ホイールおよびタイヤの損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/20-01.html')">
+                                                        <a>ホイールアライメントの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/15-01.html')">
+                                                        <a>応急タイヤ修理剤の使用期限、損傷、使用量の点検</a>
+                                                    </li>
+                                                </ul>
+                                                <h3>その他</h3>
+                                                <ul>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/1-01.html')">
+                                                        <a>リブドベルトの緩みおよび損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/22-01.html')">
+                                                        <a>ステアリングギアボックスの取付け部の緩みの点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/32-01.html')">
+                                                        <a>ステアリングの点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/39-01.html')">
+                                                        <a>ダストポーレンフィルターの交換</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/16-01.html')">
+                                                        <a>ワイパーの機能および損傷の点検、ウォッシャー液量の点検および補充</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/36-01.html')">
+                                                        <a>サービスインターバルディスプレイのリセット</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="goVwmaintenance('explaindata/modal/maintenance_table.html')">
+                                                        <a>ボディ内装および外装の損傷および腐食の点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="goVwmaintenance('explaindata/modal/maintenance_table.html')">
+                                                        <a>ボディ下廻りの損傷の点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/29-01.html')">
+                                                        <a>下廻りのラバー部品の損傷および劣化の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/19-01.html')">
+                                                        <a>車体および車枠の緩みおよび損傷の点検</a>
+                                                    </li>
+                                                    <li (click)="go3rdScreen('explaindata/3rd/26-01.html')">
+                                                        <a>遮熱板取付けの緩みおよび損傷の点検</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="goVwmaintenance('explaindata/modal/maintenance_table.html')">
+                                                        <a>ボンネットフックの注油</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="go3rdScreen('explaindata/3rd/38-01.html')">
+                                                        <a>スライディングルーフの点検および注油</a>
+                                                    </li>
+                                                    <li class="blue listvw" (click)="goVwmaintenance('explaindata/modal/maintenance_table.html')">
+                                                        <a>コンバーチブルルーフの清掃および注油</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <!---col_inner-->
+                                        </div>
+                                        <!---col-->
+                                    </div>
+                                    <!---scrl-->
+                                </div>
+                                <!--非表示ここまで-->
+                            </div>
+                        </div>
+                        <!--slide-->
+                    </div>
+                    <!--wrap-->
+                </main>
+                <!--<div id="spritespin"></div>
+            <button id="jszoom">Toggle Zoom</button>-->
+            </div>
+        </div>
+        <!--個別indexここまで-->
+        <input type="hidden" name="screenset" id="screenset" value="01">
+    </div>
+</div>
+<div id="layer3rd" style="display:none;">
+    <div class="col-md-2 leftmenu3rd">
+        <div class="col-md-12 leftmenu_inner" onclick="showFunction();">
+            <img src="assets/img/btn_function_off.png" class="img-responsive" id="btnfunction">
+        </div>
+        <div class="col-md-12 leftmenu_inner" onclick="showCheck();">
+            <img src="assets/img/btn_check_on.png" class="img-responsive" id="btncheck">
+        </div>
+        <div class="col-md-12 leftmenu_inner">
+            <a href="javascript:void(0);" onclick="go2ndScreen();">
+                <img src="assets/img/totop.png" class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontent3rd">
+        <div class="row screen3rd" id="screen3rdmain">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+</div>
+<div id="layermaintenance" style="display:none;">
+    <div class="col-md-2 leftmenumaintenance">
+        <div class="col-md-12 leftmenu_inner" (click)="goMaintenanceScreen01()">
+            <img src="assets/img/btn_cation_off.png" class="img-responsive" id="btnmaintenancescreen01">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goMaintenanceScreen02()">
+            <img src="assets/img/btn_engine_off.png" class="img-responsive" id="btnmaintenancescreen02">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goMaintenanceScreen03()">
+            <img src="assets/img/btn_car_out_off.png" class="img-responsive" id="btnmaintenancescreen03">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goMaintenanceScreen04()">
+            <img src="assets/img/btn_driving_seat_off.png" class="img-responsive" id="btnmaintenancescreen04">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="go2ndScreenFromeMaintenance()">
+            <img src="assets/img/totop.png" class="img-responsive">
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontentmaintenance">
+        <div class="row screenmaintenance" id="screenmaintenance">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="layerwheel" style="display:none;">
+    <div class="col-md-2 leftmenuwheel">
+        <div class="col-md-12 leftmenu_inner" (click)="goWheelScreen01()">
+            <img src="assets/img/btn_alignment_off.png" class="img-responsive" id="btnwheelscreen01">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goWheelScreen02()">
+            <img src="assets/img/btn_vw_tool_off.png" class="img-responsive" id="btnwheelscreen02">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="go2ndScreenFromeWheel()">
+            <img src="assets/img/totop.png" class="img-responsive">
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontentwheel">
+        <div class="row screenwheel" id="screenwheel">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="layervwmaintenance" style="display:none;">
+    <div class="col-md-2 leftmenuvwmaintenance">
+        <div class="col-md-12 leftmenu_inner">
+            <img src="assets/img/btn_vw_on.png" class="img-responsive" id="btnvwmaintenancecheck">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="go2ndScreenFromeVwmaintenance()">
+            <img src="assets/img/totop.png" class="img-responsive">
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontentvwmaintenance" id="maintenance_table">
+        <div class="row screenvwmaintenance" id="screenvwmaintenance">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</div>
+
+<div id="layerothers" style="display:none;">
+    <div class="col-md-2 leftmenuothers">
+        <div class="col-md-12 leftmenu_inner" (click)="goOthersScreen01()">
+            <img src="assets/img/btn_tsi_engine_off.png" class="img-responsive" id="btnothersscreen01">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goOthersScreen02()">
+            <img src="assets/img/btn_dsg_image_off.png" class="img-responsive" id="btnothersscreen02">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goOthersScreen03()">
+            <img src="assets/img/btn_cation_lamp_off.png" class="img-responsive" id="btnothersscreen03">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="go2ndScreenFromeothers()">
+            <img src="assets/img/totop.png" class="img-responsive">
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontentother">
+        <div class="row screenothers" id="screenothers">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</div>
+<input type="hidden" name="otherscreenset" id="otherscreenset" value="01">

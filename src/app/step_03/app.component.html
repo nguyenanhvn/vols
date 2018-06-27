@@ -1,0 +1,384 @@
+<div id="layer2rd">
+    <div class="col-md-2 leftmenu">
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen01()">
+            <img src="{{side01image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen02()">
+            <img src="{{side02image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen03()">
+            <img src="{{side03image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="goScreen04()">
+            <img src="{{side04image}}" class="img-responsive">
+        </div>
+        <div class="col-md-12 leftmenu_inner">
+            <a href="./02">
+                <img src="assets/img/totop.png" class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <!--leftmenu-->
+
+    <div class="col-md-10 maincontent" [@screenanimation]="screenState" style="opacity: 0;">
+        <div class="row screen01">
+            <!--index一覧ここから-->
+            <div id="screenid01">
+                <main>
+                    <ul class="index">
+                        <li (click)="go3rdScreen('explaindata/3rd/20-01.html')">
+                            <a>
+                                <img src="assets/img/step03/20-01.png" alt="ホイールアライメント" class="img-responsive">
+                                <p>ホイールアライメント</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/15-01.html')">
+                            <a>
+                                <img src="assets/img/step03/15-01.png" alt="ホイール・タイヤ／スペアタイヤ／タイヤ修理キット" class="img-responsive">
+                                <p>ホイール・タイヤ／スペアタイヤ／タイヤ修理キット</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/21-01.html')">
+                            <a>
+                                <img src="assets/img/step03/21-01.png" alt="ショックアブソーバー／サスペンション" class="img-responsive">
+                                <p>ショックアブソーバー／サスペンション</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/12-01.html')">
+                            <a>
+                                <img src="assets/img/step03/12-01.png" alt="ブレーキパッド／ディスク" class="img-responsive">
+                                <p>ブレーキパッド／ディスク</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/13-01.html')">
+                            <a>
+                                <img src="assets/img/step03/13-01.png" alt="ブレーキマスターシリンダー／ブレーキキャリパー／ブレーキ液" class="img-responsive">
+                                <p>ブレーキマスターシリンダー／ブレーキキャリパー／ブレーキ液</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/19-01.html')">
+                            <a>
+                                <img src="assets/img/step03/19-01.png" alt="車体／車枠" class="img-responsive">
+                                <p>車体／車枠</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/17-01.html')">
+                            <a>
+                                <img src="assets/img/step03/17-01.png" alt="灯火装置" class="img-responsive">
+                                <p>灯火装置</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/16-01.html')">
+                            <a>
+                                <img src="assets/img/step03/16-01.png" alt="フロントウインドー" class="img-responsive">
+                                <p>フロントウインドー</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/38-01.html')">
+                            <a>
+                                <img src="assets/img/step03/38-01.png" alt="スライディングルーフ" class="img-responsive">
+                                <p>スライディングルーフ</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/30-01.html')">
+                            <a>
+                                <img src="assets/img/step03/30-01.png" alt="高電圧充電ソケット（ハイブリッド車／電気自動車）" class="img-responsive">
+                                <p>高電圧充電ソケット（ハイブリッド車／電気自動車）</p>
+                            </a>
+                        </li>
+
+                        <li (click)="go3rdScreen('explaindata/3rd/4-01.html')">
+                            <a>
+                                <img src="assets/img/step03/4-01.png" alt="バッテリー／電気配線（ハイブリッド車）" class="img-responsive">
+                                <p>バッテリー／電気配線（ハイブリッド車）</p>
+                            </a>
+                        </li>
+
+                        <!---->
+
+                    </ul>
+                </main>
+            </div>
+        </div>
+        <!--index一覧ここまで-->
+        <div class="row screen02">
+            <!--index一覧ここから-->
+            <div id="screenid02">
+                <main>
+                    <ul class="index">
+                        <li (click)="go3rdScreen('explaindata/3rd/1-01.html')">
+                            <a>
+                                <img src="assets/img/step03/1-01.png" alt="パワーステアリング／オルタネーター" class="img-responsive">
+                                <p>パワーステアリング</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/2-01.html')">
+                            <a>
+                                <img src="assets/img/step03/2-01.png" alt="点火装置" class="img-responsive">
+                                <p>点火装置</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/4-01.html')">
+                            <a>
+                                <img src="assets/img/step03/4-01.png" alt="バッテリー／電気配線" class="img-responsive">
+                                <p>バッテリー／電気配線</p>
+
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/5-01.html')">
+                            <a>
+                                <img src="assets/img/step03/5-01.png" alt="エンジン本体／潤滑装置" class="img-responsive">
+                                <p>エンジン本体／潤滑装置</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/7-01.html')">
+                            <a>
+                                <img src="assets/img/step03/7-01.png" alt="エアクリーナーエレメント" class="img-responsive">
+                                <p>エアクリーナーエレメント</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/6-01.html')">
+                            <a>
+                                <img src="assets/img/step03/6-01.png" alt="燃料装置" class="img-responsive">
+                                <p>燃料装置</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/3-01.html')">
+                            <a>
+                                <img src="assets/img/step03/3-01.png" alt="冷却装置" class="img-responsive">
+                                <p>冷却装置</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/42-01.html')">
+                            <a>
+                                <img src="assets/img/step03/42-01.png" alt="公害発散防止装置" class="img-responsive">
+                                <p>公害発散防止装置</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/10-01.html')">
+                            <a>
+                                <img src="assets/img/step03/10-01.png" alt="高電圧構成部品（ハイブリッド車）" class="img-responsive">
+                                <p>高電圧構成部品（ハイブリッド車）</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/9-01.html')">
+                            <a>
+                                <img src="assets/img/step03/9-01.png" alt="高電圧システム用冷却装置（ハイブリッド車）" class="img-responsive">
+                                <p>高電圧システム用冷却装置（ハイブリッド車）</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/11-01.html')">
+                            <a>
+                                <img src="assets/img/step03/11-01.png" alt="高電圧構成部品（電気自動車）" class="img-responsive">
+                                <p>高電圧構成部品（電気自動車）</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </main>
+            </div>
+        </div>
+        <!--index一覧ここまで-->
+        <div class="row screen03">
+            <!--index一覧ここから-->
+            <div id="screenid03">
+                <main>
+                    <ul class="index">
+                        <li (click)="go3rdScreen('explaindata/3rd/22-01.html')">
+                            <a>
+                                <img src="assets/img/step03/22-01.png" alt="ステアリングギヤボックス" class="img-responsive">
+                                <p>ステアリングギヤボックス</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/44-01.html')">
+                            <a>
+                                <img src="assets/img/step03/44-01.png" alt="リブドベルト" class="img-responsive">
+                                <p>リブドベルト</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/24-01.html')">
+                            <a>
+                                <img src="assets/img/step03/24-01.png" alt="ステアリングロッド、アーム類" class="img-responsive">
+                                <p>ステアリングロッド、アーム類</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/29-01.html')">
+                            <a>
+                                <img src="assets/img/step03/29-01.png" alt="スタビライザーマウント、コネクティングロッドブッシュ（フロント／リヤ）" class="img-responsive">
+                                <p>スタビライザーマウント、コネクティングロッドブッシュ（フロント／リヤ）</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/14-01.html')">
+                            <a>
+                                <img src="assets/img/step03/14-01.png" alt="ブレーキホース／パイプ" class="img-responsive">
+                                <p>ブレーキホース／パイプ</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/25-01.html')">
+                            <a>
+                                <img src="assets/img/step03/25-01.png" alt="トランスミッション／トランスファ" class="img-responsive">
+                                <p>トランスミッション／トランスファ</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/27-01.html')">
+                            <a>
+                                <img src="assets/img/step03/27-01.png" alt="プロペラシャフト／ドライブシャフト" class="img-responsive">
+                                <p>プロペラシャフト／ドライブシャフト</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/23-01.html')">
+                            <a>
+                                <img src="assets/img/step03/23-01.png" alt="ディファレンシャル" class="img-responsive">
+                                <p>ディファレンシャル</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/26-01.html')">
+                            <a>
+                                <img src="assets/img/step03/26-01.png" alt="熱害防止装置" class="img-responsive">
+                                <p>熱害防止装置</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/28-01.html')">
+                            <a>
+                                <img src="assets/img/step03/28-01.png" alt="エキゾーストパイプ／マフラー" class="img-responsive">
+                                <p>エキゾーストパイプ／マフラー</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/31-01.html')">
+                            <a>
+                                <img src="assets/img/step03/31-01.png" alt="高電圧バッテリー（電気自動車）" class="img-responsive">
+                                <p>高電圧バッテリー（電気自動車）</p>
+                            </a>
+                        </li>
+
+                    </ul>
+                </main>
+            </div>
+        </div>
+        <!--index一覧ここまで-->
+        <div class="row screen04">
+            <!--index一覧ここから-->
+            <div id="screenid04">
+                <main>
+                    <ul class="index">
+                        <li (click)="go3rdScreen('explaindata/3rd/32-01.html')">
+                            <a>
+                                <img src="assets/img/step03/32-01.png" alt="ステアリング" class="img-responsive">
+                                <p>ステアリング</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/18-01.html')">
+                            <a>
+                                <img src="assets/img/step03/18-01.png" alt="ホーン" class="img-responsive">
+                                <p>ホーン</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/34-01.html')">
+                            <a>
+                                <img src="assets/img/step03/34-01.png" alt="ブレーキペダル" class="img-responsive">
+                                <p>ブレーキペダル</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/33-01.html')">
+                            <a>
+                                <img src="assets/img/step03/33-01.png" alt="ハンドブレーキ（パーキングブレーキ）レバー" class="img-responsive">
+                                <p>ハンドブレーキ（パーキングブレーキ）レバー</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/33-01-EL.html')">
+                            <a>
+                                <img src="assets/img/step03/33-01-el.png" alt="エレクトロニックパーキングブレーキ" class="img-responsive">
+                                <p>エレクトロニックパーキングブレーキ</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/35-01.html')">
+                            <a>
+                                <img src="assets/img/step03/35-01.png" alt="クラッチ" class="img-responsive">
+                                <p>クラッチ</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/36-01.html')">
+                            <a>
+                                <img src="assets/img/step03/36-01.png" alt="サービスインターバルディスプレイ" class="img-responsive">
+                                <p>サービスインターバルディスプレイ</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/37-01.html')">
+                            <a>
+                                <img src="assets/img/step03/37-01.png" alt="インテリアライト" class="img-responsive">
+                                <p>インテリアライト</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/39-01.html')">
+                            <a>
+                                <img src="assets/img/step03/39-01.png" alt="ダストポーレンフィルター" class="img-responsive">
+                                <p>ダストポーレンフィルター</p>
+                            </a>
+                        </li>
+                        <li (click)="go3rdScreen('explaindata/3rd/40-01.html')">
+                            <a>
+                                <img src="assets/img/step03/40-01.png" alt="高電圧充電ケーブル（電気自動車）" class="img-responsive">
+                                <p>高電圧充電ケーブル（電気自動車）</p>
+                            </a>
+                        </li>
+                    </ul>
+                </main>
+            </div>
+        </div>
+        <!--index一覧ここまで-->
+
+        <input type="hidden" name="screenset" id="screenset" value="01">
+    </div>
+    <!--maincontent-->
+</div>
+<div id="layer3rd" style="display:none;">
+    <div class="col-md-2 leftmenu3rd">
+        <div class="col-md-12 leftmenu_inner" onclick="showFunction();">
+            <img src="assets/img/btn_function_off.png" class="img-responsive" id="btnfunction">
+        </div>
+        <div class="col-md-12 leftmenu_inner" onclick="showCheck();">
+            <img src="assets/img/btn_check_on.png" class="img-responsive" id="btncheck">
+        </div>
+        <div class="col-md-12 leftmenu_inner">
+            <a href="javascript:void(0);" onclick="go2ndScreen();">
+                <img src="assets/img/toback.png" class="img-responsive">
+            </a>
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontent3rd">
+        <div class="row screen3rd" id="screen3rdmain">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+    </div>
+</div>
+
+<div id="layervwmaintenance" style="display:none;">
+    <div class="col-md-2 leftmenuvwmaintenance">
+        <div class="col-md-12 leftmenu_inner">
+            <img src="assets/img/btn_check_on.png" class="img-responsive" id="btnvwmaintenancecheck">
+        </div>
+        <div class="col-md-12 leftmenu_inner" (click)="go2ndScreenFromeVwmaintenance()">
+            <img src="assets/img/toback.png" class="img-responsive">
+        </div>
+    </div>
+    <!--leftmenu-->
+    <div class="col-md-10 maincontentvwmaintenance">
+        <div class="row screenvwmaintenance" id="screenvwmaintenance">
+            <main>
+                <div class="wrap">
+
+                </div>
+
+            </main>
+
+        </div>
+
+    </div>
+</div>

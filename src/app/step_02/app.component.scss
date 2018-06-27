@@ -1,0 +1,696 @@
+@charset "UTF-8";
+@font-face{
+  font-family:"VWHeadWeb-Bold";
+  src:url("/assets/font/VW_Head/VWHeadWeb-Bold.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWHeadWeb-Bold.woff2")
+  format("woff2");
+  font-weight:"bold";
+  font-style:normal;
+}
+@font-face{
+  font-family:"VWHeadWeb-Regular";
+  src:url("/assets/font/VW_Head/VWHeadWeb-Regular.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWHeadWeb-Regular.woff2")
+  format("woff2");
+  font-weight:normal;
+  font-style:normal;
+}
+@font-face{
+  font-family:"VWTextWeb-Bold";
+  src:url("/assets/font/VW_Head/VWTextWeb-Bold.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWTextWeb-Bold.woff2")
+  format("woff2");
+  font-weight:"bold";
+  font-style:normal;
+}
+@font-face{
+  font-family:"VWTextWeb-Regular";
+  src:url("/assets/font/VW_Head/VWTextWeb-Regular.woff")
+  format("woff"),
+  url("/assets/font/VW_Head/VWTextWeb-Regular.woff2")
+  format("woff2");
+  font-weight:normal;
+  font-style:normal;
+}
+
+*{
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+  color:#333;
+  height: 100%;
+}
+body {
+  font-size: 10px;
+  font-size: 1.0rem;
+  font-family: "VWHeadWeb-Regular","VWHeadWeb-Bold","Noto Sans Japanese",sans-serif;
+  height: 100%;
+  margin: 0;
+}
+h1, h2, h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+ul,ol,li{
+  list-style: none;
+  margin-bottom: 0;
+}
+a{
+  text-decoration: none;
+  color:#333;
+}
+p{
+  margin: 0;
+}
+.ng-tns-c1-0{
+  padding: 0;
+}
+.container:before{
+  display: inline;
+}
+.col-md-10,
+.col-md-12,
+.col-md-2,
+.col-md-1,
+.col-md-11{
+  padding-right: 0;
+  padding-left: 0;
+}
+.row {
+  margin-right: 0;
+  margin-left: 0;
+}
+.leftmenu{
+  width: 10%;
+  border-right: 2px solid #ededed;
+  position: fixed;
+  height: calc(100% - 85px);
+  .leftmenu_inner{
+    position: relative;
+    text-align: center;
+    //height: 18.24%;
+    height: 18.18%;
+    //transform: translateY(-25%);
+    border-bottom: 2px solid #ededed;
+    img{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      width: 70%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      //margin-right: auto;
+      //margin-left: auto;
+    }
+    &:nth-child(6){
+      border-bottom: none;
+      //height: 8.8%;
+      height: 9.1%;
+      background: #f5f5f5;
+    }
+  }
+}
+.leftmenu3rd{
+  width: 12%;
+  border-right: 2px solid #ededed;
+  position: fixed;
+  height: calc(100% - 85px);
+  .leftmenu_inner{
+    position: relative;
+    text-align: center;
+    height: 45%;
+    //transform: translateY(-25%);
+    border-bottom: 2px solid #ededed;
+    img{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      width: 70%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      //margin-right: auto;
+      //margin-left: auto;
+    }
+    &:nth-child(3){
+      border-bottom: none;
+      height: 10.0%;
+      background: #f5f5f5;
+    }
+  }
+}
+.maincontent{
+  width: 90%;
+  position: relative;
+  left: 10%;
+  // height: auto;
+  height: calc(100% - 85px);
+  .screen01 {
+    //display: none;
+    //height: 85%;
+    main {
+      margin-top: 0;
+      width: 80%;
+      //height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      h2{
+        font-family: "VWHeadWeb-Bold";
+        font-weight: bold;
+        font-style: normal;
+        line-height: 3.2rem;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #0099da;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        background: url("/assets/img/note.png") no-repeat;
+        background-position: right center;
+        background-size: 215px;
+      }
+      .maintenance_01{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_01.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .maintenance_02{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_02.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .wrap{
+        overflow: hidden;
+        width: 100%;
+        //height: 100%;
+        table{
+          //margin-top: 25px;
+          max-width: 80vw;
+          //height: 85vh;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          td{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            img{
+              display: block;
+              //width: 100%;
+              height: auto;
+              margin: 0;
+              padding: 0;
+              border: 0;
+            }
+          }
+          td.ng-tns-c1-0{
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .screen02 {
+    //display: none;
+    //height: 85%;
+    main {
+      margin-top: 0;
+      width: 80%;
+      //height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      h2{
+        font-family: "VWHeadWeb-Bold";
+        font-weight: bold;
+        font-style: normal;
+        line-height: 3.2rem;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #0099da;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        background: url("/assets/img/note.png") no-repeat;
+        background-position: right center;
+        background-size: 215px;
+      }
+      .maintenance_01{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_01.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .maintenance_02{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_02.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .wrap{
+        overflow: hidden;
+        width: 100%;
+        //height: 100%;
+        table{
+          //margin-top: 25px;
+          max-width: 80vw;
+          //height: 85vh;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          td{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            img{
+              display: block;
+              //width: 100%;
+              height: auto;
+              margin: 0;
+              padding: 0;
+              border: 0;
+            }
+          }
+          td.ng-tns-c1-0{
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .screen03 {
+    //display: none;
+    //height: 85%;
+    main {
+      margin-top: 0;
+      width: 80%;
+      //height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      h2{
+        line-height: 3.2rem;
+        font-family: "VWHeadWeb-Bold";
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #0099da;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        background: url("/assets/img/note.png") no-repeat;
+        background-position: right center;
+        background-size: 215px;
+      }
+      .maintenance_01{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_01.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .maintenance_02{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_02.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .wrap{
+        overflow: hidden;
+        width: 100%;
+        //height: 100%;
+        table{
+          //margin-top: 25px;
+          max-width: 80vw;
+          //height: 85vh;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          td{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            img{
+              display: block;
+              //width: 100%;
+              height: auto;
+              margin: 0;
+              padding: 0;
+              border: 0;
+            }
+          }
+          td.ng-tns-c1-0{
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .screen04 {
+    //display: none;
+    //height: 85%;
+    main {
+      margin-top: 0;
+      width: 80%;
+      //height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      h2{
+        line-height: 3.2rem;
+        font-family: "VWHeadWeb-Bold";
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #0099da;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        background: url("/assets/img/note.png") no-repeat;
+        background-position: right center;
+        background-size: 215px;
+      }
+      .maintenance_01{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_01.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .maintenance_02{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_02.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .wrap{
+        overflow: hidden;
+        width: 100%;
+        //height: 100%;
+        table{
+          //margin-top: 25px;
+          max-width: 80vw;
+          //height: 85vh;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          td{
+            margin: 0;
+            padding: 0;
+            border: 0;
+            img{
+              display: block;
+              //width: 100%;
+              height: auto;
+              margin: 0;
+              padding: 0;
+              border: 0;
+            }
+          }
+          td.ng-tns-c1-0{
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+  .screen05{
+    //display: none;
+    //height: 85%;
+    main {
+      margin-top: 0px;
+      width: 80%;
+      //height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      h2{
+        line-height: 3.2rem;
+        font-family: "VWHeadWeb-Bold";
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #0099da;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        margin-bottom: 10px;
+        //background: url("/assets/img/note.png") no-repeat;
+        background-position: right center;
+        background-size: 215px;
+      }
+      .maintenance_01{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_01.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .maintenance_02{
+        &:before{
+          width: 40px;
+          height: 40px;
+          background: url("/assets/img/maintenance_02.png") no-repeat;
+          margin:0 10px 0 0;
+          content:" ";
+          display:inline-block;
+          background-size:contain;
+          vertical-align:middle;
+        }
+      }
+      .wrap {
+        //width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .wrap_inner {
+        //border: 1px solid #eee;
+        h3 {
+          line-height: 4.0rem;
+          //background: url("/assets/img/vw_icon.png") no-repeat;
+          background-size: 20px;
+          background-position: left 20px center;
+          border-bottom: solid 6px #2274ac;
+          padding-left: 50px;
+          font-family: "VWHeadWeb-Bold";
+          font-weight: bold;
+          font-style: normal;
+          font-size: 1.4rem;
+          color: #2274ac;
+        }
+        ul {
+          padding-top: 10px;
+          padding-bottom: 10px;
+          //padding-left: 20px;
+          margin-left:0;
+          li {
+            font-family: "VWHeadWeb-Bold";
+            font-weight: bold;
+            font-style: normal;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            &:before {
+              font-family: "FontAwesome";
+              // content: "\f058";
+              content: "・";
+              padding-right: 0.7rem;
+              color: #2274ac;
+            }
+          }
+        }
+      }
+        .next_link{
+          float: right;
+          margin-top: 10px;
+          margin-bottom: 10px;
+          border: solid 1px #ddd;
+          width: auto;
+          display: inline-block;
+          a{
+            padding: 0.7rem;
+            color: #333;
+            line-height: 2.0rem;
+            font-size: 1.3rem;
+            font-family: "VWHeadWeb-Bold";
+            font-weight: bold;
+            font-style: normal;
+            display: block;
+            width: auto;
+            &:after{
+              font-family: "FontAwesome";
+              content: "\f105";
+              padding-left: 0.7rem;
+            }
+          }
+          &:after{
+            content: '';
+            display: block;
+            clear: both;
+          }
+        }
+      }
+    }
+  }
+}
+.leftmenuwheel{
+  width: 12%;
+  border-right: 2px solid #ededed;
+  position: fixed;
+  height: calc(100% - 85px);
+  .leftmenu_inner{
+    position: relative;
+    text-align: center;
+    height: 45%;
+    //transform: translateY(-25%);
+    border-bottom: 2px solid #ededed;
+    img{
+      position: absolute;
+      top:50%;
+      left: 50%;
+      width: 70%;
+      -ms-transform: translate(-50%,-50%);
+      -webkit-transform : translate(-50%,-50%);
+      transform : translate(-50%,-50%);
+      //margin-right: auto;
+      //margin-left: auto;
+    }
+    &:nth-child(3){
+      border-bottom: none;
+      height: 10.0%;
+      background: #f5f5f5;
+    }
+  }
+}
+.maincontentwheel{
+  width: 88%;
+  position: relative;
+  left: 12%;
+  // height: auto;
+  height: calc(100% - 85px);
+  .screenwheel{
+    //display: none;
+    //height: 85%;
+    main {
+      margin-top: 0px;
+      width: 95%;
+      //height: 80vh;
+      margin-left: auto;
+      margin-right: auto;
+      // overflow: auto;
+      .scrl:-webkit-scrollbar {
+        height: 5px;
+      }
+      /*バーの太さ*/
+      .scrl:-webkit-scrollbar-track {
+        background: #efefef;
+      }
+      /*バーの背景色*/
+      .scrl:-webkit-scrollbar-thumb {
+        background: #009cda;
+      }
+      h2{
+        line-height: 3.2rem;
+        font-family: "VWHeadWeb-Bold";
+        font-weight: bold;
+        font-style: normal;
+        font-size: 1.6rem;
+        border-bottom: 2px solid #0099da;
+        padding-top: 20px;
+        margin-bottom: 10px;
+        //background: url("/assets/img/note.png") no-repeat;
+        background-position: right center;
+        background-size: 215px;
+      }
+      .wrap {
+        //width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        .wrap_inner {
+          //border: 1px solid #eee;
+          h3 {
+            line-height: 4.0rem;
+            //background: url("/assets/img/vw_icon.png") no-repeat;
+            background-size: 20px;
+            background-position: left 20px center;
+            border-bottom: solid 6px #2274ac;
+            padding-left: 50px;
+            font-family: "VWHeadWeb-Bold";
+            font-weight: bold;
+            font-style: normal;
+            font-size: 1.4rem;
+            color: #2274ac;
+          }
+          ul {
+            padding-top: 10px;
+            padding-bottom: 10px;
+            //padding-left: 20px;
+            margin-left:0;
+            li {
+              font-family: "VWHeadWeb-Bold";
+              font-weight: bold;
+              font-style: normal;
+              font-size: 1.4rem;
+              line-height: 2.4rem;
+              &:before {
+                font-family: "FontAwesome";
+                content: "\f058";
+                padding-right: 0.7rem;
+                color: #2274ac;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

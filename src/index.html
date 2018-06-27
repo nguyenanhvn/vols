@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ja">
+
+<head>
+  <meta charset="utf-8">
+  <title>Digital Volkswagen Service Guide</title>
+  <base href="/">
+  <script>
+    if (document.domain == 'dsg.boar.work') {
+      var baseurl = "https://dsg.boar.work/";
+    } else if (document.domain == 'dsg.vgjas.com') {
+      var baseurl = "https://dsg.vgjas.com/";
+    } else {
+      var baseurl = "https://dsg.vgjas.com/";
+    }
+  </script>
+  <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+      w[l] = w[l] || []; w[l].push({
+        'gtm.start':
+          new Date().getTime(), event: 'gtm.js'
+      }); var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+          'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-M2ZPP58');</script>
+  <!-- End Google Tag Manager -->
+  <script>
+    function pushGTMlookScreen(screenurl) {
+      dataLayer = dataLayer || [];
+      dataLayer.push({
+        'trackPageview': screenurl,
+        'title': '第三階層',
+        'event': 'loadready'
+      });
+    }
+  </script>
+  <script src="assets/js/jquery-3.2.1.min.js"></script>
+  <script src="assets/js/jquery-ui.js"></script>
+  <script src="assets/js/jquery.fittext.js"></script>
+  <script src="assets/js/jquery.rwdImageMaps.js"></script>
+  <script src="assets/js/jquery.magnific-popup.js"></script>
+  <!-- Hammer JS -->
+  <!--<script src="assets/js/hammer.js"></script>-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+  <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+  <link href="assets/css/magnific-popup.css" rel="stylesheet">
+  <link href="assets/css/swiper.css" rel="stylesheet">
+</head>
+
+<body>
+  <app-root></app-root>
+
+</body>
+<script src="assets/js/jquery-3.2.1.min.js"></script>
+<script src="assets/js/jquery-ui.js"></script>
+<script src="assets/js/jquery.fittext.js"></script>
+<script src="assets/js/jquery.rwdImageMaps.js"></script>
+<script src="assets/js/jquery.magnific-popup.js"></script>
+<script src="assets/js/spritespin.js"></script>
+<script src="assets/js/swiper.js"></script>
+<script>
+  // 第三階層登場時アニメ
+  function go3rdScreen(url) {
+    $("#layer2rd").hide();
+    $("#layer3rd").show("slide");
+    // 取得すべきhtmlを取り出し
+    var screenurl = url + '?ap=1';
+    // var screenurl = 'https://dsg.vgjas.com/explaindata/3rd/16-01.html';
+    console.log(screenurl);
+    pushGTMlookScreen(screenurl);
+
+    // var tags = document.createDocumentFragment();
+    // var link = document.createElement('link');
+    // link.rel = 'stylesheet';
+    // link.href = baseurl + 'explaindata/3rd/shared/css/wrapstyle.css';
+    // tags.appendChild(link);
+    // document.getElementsByTagName('head')[0].appendChild(tags);
+
+    // console.log(link.href);
+
+    $("div#screen3rdmain div.wrap").load(screenurl, "html", showFunction);
+
+  }
+  function showCheck() {
+    $("#function").hide();
+    $("#check").show();
+
+    $("#btncheck").attr('src', 'assets/img/btn_check_on.png');
+    $("#btnfunction").attr('src', 'assets/img/btn_function_off.png');
+
+    // スクロールしてもトップに戻る
+    $(window).scrollTop(0);
+  }
+  function showFunction() {
+    $("#check").hide();
+    $("#function").show();
+
+    $("#btncheck").attr('src', 'assets/img/btn_check_off.png');
+    $("#btnfunction").attr('src', 'assets/img/btn_function_on.png');
+
+    // スクロールしてもトップに戻る
+    $(window).scrollTop(0);
+  }
+
+  function go2ndScreen() {
+    $("#layer3rd").hide();
+    $("#layer2rd").show("slide");
+
+    // クリッカブルマップのレスポンシブ調整
+    $('img[usemap]').rwdImageMaps();
+
+
+  }
+
+  // ホイールアライメント点検登場時アニメ
+  function goWheel() {
+    $("#layer2rd").hide();
+    $("#layer3rd").hide();
+    $("#layerwheel").show("slide");
+    // 取得すべきhtmlを取り出し
+    var screenurl = baseurl + 'explaindata/modal/wa_maintenance.html?ap=1';
+    pushGTMlookScreen(screenurl);
+
+    $("div#screenwheel div.wrap").load(screenurl, "html", firstWheelscreen);
+
+  }
+
+  // ホイールアライメント点検のボタンの状態をすべてoff
+  function changeWheelBtnOff() {
+    $("#wheelscreen01").hide();
+    $("#wheelscreen02").hide();
+
+    $("#btnwheelscreen01").attr('src', 'assets/img/btn_alignment_off.png');
+    $("#btnwheelscreen02").attr('src', 'assets/img/btn_vw_tool_off.png');
+
+  }
+
+  // ホイールアライメント点検の初期状態の画面表示
+  function firstWheelscreen() {
+    $("#wheelscreen01").show();
+    $("#wheelscreen02").hide();
+
+    $("#btnwheelscreen01").attr('src', 'assets/img/btn_alignment_on.png');
+    $("#btnwheelscreen02").attr('src', 'assets/img/btn_vw_tool_off.png');
+
+  }
+
+  // ホイールアライメント点検の画面1描画
+  function goWheelScreen01() {
+    changeWheelBtnOff();
+    $("#wheelscreen01").show();
+    $("#btnwheelscreen01").attr('src', 'assets/img/btn_alignment_on.png');
+
+    // スクロールしてもトップに戻る
+    $(window).scrollTop(0);
+  }
+
+  // ホイールアライメント点検の画面2描画
+  function goWheelScreen02() {
+    changeWheelBtnOff();
+    $("#wheelscreen02").show();
+    $("#btnwheelscreen02").attr('src', 'assets/img/btn_vw_tool_on.png');
+
+    // スクロールしてもトップに戻る
+    $(window).scrollTop(0);
+  }
+
+  // ホイールアライメント点検から戻るボタンをおした時
+  function go2ndScreenFromeWheel() {
+    $("#layer2rd").hide();
+    $("#layerwheel").hide();
+    $("#layer3rd").show("slide");
+
+    // クリッカブルマップのレスポンシブ調整
+    $('img[usemap]').rwdImageMaps();
+
+
+  }
+
+
+</script>
+<script>
+  // 2. This code loads the IFrame Player API code asynchronously.
+  var tag = document.createElement('script');
+
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+  // 3. This function creates an <iframe> (and YouTube player)
+  //    after the API code downloads.
+  var player = [];
+  var ytPlaying, ytStop, ytPlay;
+
+  // function onYouTubeIframeAPIReady() {
+  // 	// iFrameが準備できたらビデオを再生
+  // 	for (var key in movieList) {
+  // 		playFirstVideo(movieList[key],key);
+  // 	}
+  // }
+
+  function buildYouTube() {
+    for (var key in movieList) {
+      playFirstVideo(movieList[key], key);
+    }
+  }
+
+  function playFirstVideo(movie, target) {
+    // playerの準備
+    player[target] = new YT.Player(target, {
+      videoId: movie,
+      height: '219',
+      width: '389',
+      playerVars: {
+        controls: false,
+        disablekb: true,
+        showinfo: false,
+        rel: false,
+        enablejsapi: true,
+        listType: 'playlist',
+        cc_load_policy: false,
+        // wmode: 'transparent', //z-indexを有効にする
+        loop: true,
+        playlist: movie
+      },
+      events: {
+        // 'onReady': onPlayerReady,
+        'onStateChange': onPlayerStateChange
+      }
+    });
+    // // z-indexには気をつけろ。
+    // $('iframe').css('z-index',-999);
+  }
+
+  function onPlayerReady(e) {
+    e.target.playVideo();
+  }
+
+  // プレーヤーの状態に変化があった時に実行
+  function onPlayerStateChange(e) {
+    // 各プレーヤーの状態を確認
+    for (var key in movieList) {
+      var thisState = player[key].getPlayerState();
+      if (thisState == 1 && ytPlaying == undefined) {
+        ytPlaying = key;
+      } else if (thisState == 1 && ytPlaying != key) {
+        ytStop = ytPlaying;
+        ytPlay = key;
+      }
+    }
+    // 同時再生があった場合、元々再生していた方を停止する
+    if (ytStop != undefined) {
+      player[ytStop].pauseVideo();
+      ytStop = undefined;
+    }
+    // 現在再生中のプレーヤー番号を保存しておく
+    if (ytPlay != undefined) {
+      ytPlaying = ytPlay;
+      ytPlay = undefined;
+    }
+
+    var nowstate = player[ytPlaying].getPlayerState();
+    if (nowstate == 0) {
+      player[ytPlaying].playVideo();
+    }
+  }
+
+</script>
+
+</html>

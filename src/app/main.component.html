@@ -1,0 +1,24 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 header">
+            <div class="col-sm-7" (click)="tapedhead()">
+                <a class="logo" href="javascript:void(0);">
+                    <img alt="Volkswagen" src="assets/img/logo-2.png">
+                </a>
+                <h1>Digital Volkswagen Service Guide</h1>
+            </div>
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-2">
+                <div class="pull-right" style="margin-right:25px;">
+                    <a href="assets/img/OperationGuide.pdf" class="fr-icon" target="_blank">
+                        <img src="assets/img/button.png" class="img-responsive" alt="Digital Volkswagen Service Guide">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row bg">
+        <router-outlet></router-outlet>
+    </div>
+</div>
